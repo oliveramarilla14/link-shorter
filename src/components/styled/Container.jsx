@@ -1,22 +1,25 @@
 import styled from '@emotion/styled'
 
-export const Margin = styled.div({
+const Margin = styled.div({
   fontFamily: '"Poppins"',
-  margin: 'auto'
+  margin: '0 auto',
+  marginTop: '20px'
 }, ({ max }) => ({
   maxWidth: max
 }))
 
 const Background = styled.div(({ bgColor }) => ({
+  width: '100%',
   backgroundColor: bgColor
 }))
 
 export const Flex = styled.div({
   display: 'flex'
-}, ({ direction, justify, align }) => ({
+}, ({ direction, justify, align, gap }) => ({
   flexDirection: direction,
   justifyContent: justify,
-  alignItems: align
+  alignItems: align,
+  gap
 }))
 
 export function Container ({ max, bgColor, children }) {
