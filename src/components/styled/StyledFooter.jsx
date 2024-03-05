@@ -5,6 +5,12 @@ export const StyledFooter = styled.div`
   grid-template-columns: repeat(5,1fr);
   color: white;
   padding: 40px 0;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    
+  }
 `
 
 export const Column = styled.div`

@@ -19,7 +19,18 @@ export const Flex = styled.div({
   flexDirection: direction,
   justifyContent: justify,
   alignItems: align,
-  gap
+  gap,
+  '& > div': {
+    width: '50%',
+    '& > img': {
+      width: '100%',
+      marginTop: '70px'
+    }
+  },
+  ' @media (max-width: 600px)': {
+    flexDirection: 'column'
+  }
+
 }))
 
 export function Container ({ max, bgColor, children, transform }) {

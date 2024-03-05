@@ -1,11 +1,18 @@
 import { Container, Flex } from './styled/Container'
 import working from '../assets/illustration-working.svg'
 import { HeroText } from './styled/Header'
+import MediaQuery, { useMediaQuery } from 'react-responsive'
 
 function Hero () {
+  const max600 = useMediaQuery({ query: '(max-width: 600px)' })
   return (
     <Container max='1000px'>
-      <Flex gap='100px' align='center'>
+      <Flex gap={max600 ? '30px' : '100px'} align='center'>
+        <MediaQuery maxWidth='600px'>
+          <div>
+            <img src={working} alt='work' />
+          </div>
+        </MediaQuery>
         <HeroText direction='column'>
           <h2>
             More than just shorter links
@@ -15,7 +22,11 @@ function Hero () {
           </p>
           <button>Get Started</button>
         </HeroText>
-        <img src={working} alt='work' width='500px' />
+        <MediaQuery minWidth='600px'>
+          <div>
+            <img src={working} alt='work' />
+          </div>
+        </MediaQuery>
       </Flex>
     </Container>
   )

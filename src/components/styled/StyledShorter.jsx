@@ -15,6 +15,12 @@ export const StyledShorter = styled(Flex)`
   border-radius:10px;
   padding: 20px;
 
+  small{
+    color: ${({ theme }) => theme.colors.secondary.Red};
+    position: absolute;
+    bottom: 2px;
+  }
+
   
   input{
     padding: 10px 10px;
@@ -23,7 +29,11 @@ export const StyledShorter = styled(Flex)`
     width: 100%;
     outline: none;
     border-radius: 5px;
-  }
+   
+    ${({ empty }) => empty && 'border: 2px solid hsl(0, 87%, 67%)'}
+    }
+
+
   button{
     cursor:pointer;
     color: white;
@@ -52,7 +62,9 @@ export const Short = styled.div`
     color: ${({ theme }) => theme.colors.primary.Cyan};
     margin-right:20px;
   }
-  button{
+
+`
+export const CopyBtn = styled.button`
     cursor:pointer;
     color: white;
     border: none;
@@ -64,5 +76,15 @@ export const Short = styled.div`
     &:active {
         transform:scale(0.9);
       }
-  }
+`
+
+export const CopiedBtn = styled.button`
+    cursor:pointer;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: ${({ theme }) => theme.colors.primary.Violet};
 `

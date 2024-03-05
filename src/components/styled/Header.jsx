@@ -6,8 +6,25 @@ export const Header = styled.header(({ theme }) => ({
   alignItems: 'center',
   gap: '50px',
   marginTop: '20px',
+  marginBottom: '20px',
+  ' @media (max-width: 600px)': {
+    padding: '10px 20px',
+    justifyContent: 'space-between',
+    position: 'fixed',
+    top: '0',
+    width: '100%',
+    backgroundColor: 'white',
+    zIndex: '100',
+    marginTop: '0'
+  },
+  img: {
+    cursor: 'pointer'
+  },
 
   nav: {
+    ' @media (max-width: 600px)': {
+      display: 'none'
+    },
     display: 'flex',
     gap: '20px',
 
@@ -28,7 +45,6 @@ export const Header = styled.header(({ theme }) => ({
 }))
 
 export const HeroText = styled(Flex)`
-flex:fit-content;
 
   h2 {
     font-size: 50px;
@@ -56,4 +72,26 @@ flex:fit-content;
         transform:scale(0.9);
       }
   }
+
+  @media (max-width: 600px){
+    h2 {
+    font-size: 35px;
+  }
+  }
+`
+
+export const MenuNav = styled.div`
+display: flex;
+flex-direction: column;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+ a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+}
+
 `

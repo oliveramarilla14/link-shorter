@@ -14,6 +14,10 @@ p{
   color: ${({ theme }) => theme.colors.neutral.DarkBlue};
 text-align: center;
 width: 500px;
+
+@media (max-width: 600px) {
+  width: 350px;
+  }
 }
 `
 
@@ -24,6 +28,11 @@ export const CardDash = styled.div`
   gap: 20px;
   position: relative;
 
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr ;
+    margin-top :70px ;
+  }
+
   &::before{
     content: '';
     position: absolute;
@@ -31,7 +40,14 @@ export const CardDash = styled.div`
     top: 60%;
     width: 100%;
     height: 8px;
+
     background-color:${({ theme }) => theme.colors.primary.Cyan} ;
+    @media (max-width: 600px){
+    left: 50%;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    }
   }
 `
 
@@ -64,6 +80,12 @@ export const Card = styled.div`
     text-align: start;
     margin-top: 20px;
     color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
+    @media (max-width: 600px) {
+      width: auto;
+    text-align: center;
+    margin-top: 20px;
+    color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
+  }
   }
 
 
