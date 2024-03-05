@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Shorter from './components/Shorter'
 import Statics from './components/Statics'
 import Boost from './components/Boost'
+import Footer from './components/styled/Footer'
 
 function App () {
   return (
@@ -14,6 +15,7 @@ function App () {
       <Shorter />
       <Statics />
       <Boost />
+      <Footer />
     </ThemeProvider>
 
   )
