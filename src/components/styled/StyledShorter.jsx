@@ -14,7 +14,7 @@ export const StyledShorter = styled(Flex)`
   height: 100px;
   border-radius:10px;
   padding: 20px;
-  transform: translateY(70%);
+  transform: translateY(50%);
   
   input{
     padding: 10px 10px;

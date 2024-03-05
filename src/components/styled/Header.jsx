@@ -5,6 +5,7 @@ export const Header = styled.header(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '50px',
+  marginTop: '20px',
 
   nav: {
     display: 'flex',

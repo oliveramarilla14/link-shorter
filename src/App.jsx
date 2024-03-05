@@ -4,6 +4,7 @@ import { theme } from './components/styled/theme'
 import Hero from './components/Hero'
 import Shorter from './components/Shorter'
 import Statics from './components/Statics'
+import Boost from './components/Boost'
 
 function App () {
   return (
@@ -12,6 +13,7 @@ function App () {
       <Hero />
       <Shorter />
       <Statics />
+      <Boost />
     </ThemeProvider>
 
   )

@@ -2,8 +2,7 @@ import styled from '@emotion/styled'
 
 const Margin = styled.div({
   fontFamily: '"Poppins"',
-  margin: '0 auto',
-  marginTop: '20px'
+  margin: '0 auto'
 }, ({ max }) => ({
   maxWidth: max
 }))
