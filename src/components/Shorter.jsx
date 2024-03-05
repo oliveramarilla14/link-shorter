@@ -8,14 +8,38 @@ function Shorter () {
   const [empty, setEmpty] = useState(false)
   const linkToShort = useRef()
 
+  const shortener = (text) => {
+    try {
+      fetch('https://api-ssl.bitly.com/v4/shorten', {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer aba5415dda791e0a1ee0e4263b829befc51adacc',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ long_url: text })
+      })
+        .then(res => res.json())
+        .then(json => {
+          if (json.errors) {
+            setEmpty(true)
+            return
+          }
+          setShortLink({
+            large: linkToShort.current.value,
+            shorted: json.link
+          })
+          linkToShort.current.value = ''
+        })
+    } catch (error) {
+
+    }
+  }
+
   const handleShort = () => {
     if (linkToShort.current.value) {
       setEmpty(false)
       setCopied(false)
-      setShortLink({
-        large: linkToShort.current.value,
-        shorted: linkToShort.current.value
-      })
+      shortener(linkToShort.current.value)
     } else {
       (
         setEmpty(true)
@@ -35,7 +59,7 @@ function Shorter () {
       <StyledShorter empty={empty}>
         <input ref={linkToShort} type='text' placeholder='Shorten a link here...' />
         <button onClick={handleShort}>Shorten It!</button>
-        {empty && <small>Please add a link</small>}
+        {empty && <small>Please add a valid link</small>}
       </StyledShorter>
       {
         shortLink &&

@@ -45,7 +45,8 @@ export const Header = styled.header(({ theme }) => ({
 }))
 
 export const HeroText = styled(Flex)`
-  h2 {
+padding: 0 10px;
+h2 {
     font-size: 50px;
     margin: 0;
     line-height: 1;
@@ -56,6 +57,7 @@ export const HeroText = styled(Flex)`
     color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
     margin-bottom: 20px;
   }
+
   button{
     color: white;
     cursor: pointer;
@@ -73,6 +75,10 @@ export const HeroText = styled(Flex)`
   }
 
   @media (max-width: 600px){
+    text-align: center;
+    button{
+      margin: auto;
+    }
     h2 {
     font-size: 35px;
   }
