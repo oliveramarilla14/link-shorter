@@ -7,9 +7,10 @@ const Margin = styled.div({
   maxWidth: max
 }))
 
-const Background = styled.div(({ bgColor }) => ({
+const Background = styled.div(({ bgColor, transform }) => ({
   width: '100%',
-  backgroundColor: bgColor
+  backgroundColor: bgColor,
+  transform
 }))
 
 export const Flex = styled.div({
@@ -21,9 +22,9 @@ export const Flex = styled.div({
   gap
 }))
 
-export function Container ({ max, bgColor, children }) {
+export function Container ({ max, bgColor, children, transform }) {
   return (
-    <Background bgColor={bgColor}>
+    <Background bgColor={bgColor} transform={transform}>
       <Margin max={max}>
         {children}
       </Margin>

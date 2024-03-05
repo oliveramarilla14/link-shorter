@@ -14,7 +14,7 @@ export const StyledShorter = styled(Flex)`
   height: 100px;
   border-radius:10px;
   padding: 20px;
-  transform: translateY(50%);
+
   
   input{
     padding: 10px 10px;
@@ -34,5 +34,35 @@ export const StyledShorter = styled(Flex)`
     font-size: 18px;
     font-weight: bold;
     background-color: ${({ theme }) => theme.colors.primary.Cyan};
+    &:active {
+        transform:scale(0.9);
+      }
+  }
+`
+export const Short = styled.div`
+  margin-top: 20px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 10px;
+
+  a{
+    color: ${({ theme }) => theme.colors.primary.Cyan};
+    margin-right:20px;
+  }
+  button{
+    cursor:pointer;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: ${({ theme }) => theme.colors.primary.Cyan};
+    &:active {
+        transform:scale(0.9);
+      }
   }
 `

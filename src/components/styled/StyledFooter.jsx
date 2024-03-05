@@ -16,6 +16,10 @@ ul{
     list-style: none;
     color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
     cursor: pointer;
+
+    &:hover{
+    color:${({ theme }) => theme.colors.primary.Cyan};
+    }
   }
 
   ${({ img }) => img && `

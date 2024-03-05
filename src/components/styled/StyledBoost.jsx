@@ -17,6 +17,9 @@ export const StyledBoost = styled(Flex)`
   }
 
   button{
+    &:active {
+        transform:scale(0.9);
+      }
     cursor:pointer;
     color: white;
     border: none;

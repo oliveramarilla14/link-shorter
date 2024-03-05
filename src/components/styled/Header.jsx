@@ -15,7 +15,14 @@ export const Header = styled.header(({ theme }) => ({
       textDecoration: 'none',
       fontWeight: 'bold',
       fontSize: '16px',
-      color: theme.colors.neutral.GrayishViolet
+      color: theme.colors.neutral.GrayishViolet,
+
+      '&:hover': {
+        borderBottom: `1px solid ${theme.colors.neutral.GrayishViolet}`
+      },
+      '&:active': {
+        color: 'black'
+      }
     }
   }
 }))
@@ -36,6 +43,7 @@ flex:fit-content;
   }
   button{
     color: white;
+    cursor: pointer;
     border: none;
     padding: 15px 30px;
     width: fit-content;
@@ -43,5 +51,9 @@ flex:fit-content;
     font-size: 18px;
     font-weight: bold;
     background-color: ${({ theme }) => theme.colors.primary.Cyan};
+
+    &:active {
+        transform:scale(0.9);
+      }
   }
 `
