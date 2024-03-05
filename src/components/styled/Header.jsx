@@ -45,7 +45,6 @@ export const Header = styled.header(({ theme }) => ({
 }))
 
 export const HeroText = styled(Flex)`
-
   h2 {
     font-size: 50px;
     margin: 0;
@@ -93,5 +92,10 @@ transform: translate(-50%,-50%);
       font-weight: bold;
       font-size: 16px;
 }
+
+`
+
+export const Max = styled.div`
+width: 50%;
 
 `

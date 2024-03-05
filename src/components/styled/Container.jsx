@@ -21,7 +21,6 @@ export const Flex = styled.div({
   alignItems: align,
   gap,
   '& > div': {
-    width: '50%',
     '& > img': {
       width: '100%',
       marginTop: '70px'

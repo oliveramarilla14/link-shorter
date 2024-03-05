@@ -14,9 +14,14 @@ export const StyledFooter = styled.div`
 `
 
 export const Column = styled.div`
-
+@media (max-width: 600px){
+  text-align: center;
+}
 ul{
   margin: 10px 0;
+  
+  
+
   li{
     margin: 10px 0;
     list-style: none;

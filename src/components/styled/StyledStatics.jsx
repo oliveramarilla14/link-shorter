@@ -13,11 +13,6 @@ h2{
 p{
   color: ${({ theme }) => theme.colors.neutral.DarkBlue};
 text-align: center;
-width: 500px;
-
-@media (max-width: 600px) {
-  width: 350px;
-  }
 }
 `
 
@@ -80,13 +75,10 @@ export const Card = styled.div`
     text-align: start;
     margin-top: 20px;
     color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
-    @media (max-width: 600px) {
-      width: auto;
-    text-align: center;
-    margin-top: 20px;
-    color: ${({ theme }) => theme.colors.neutral.GrayishViolet};
-  }
   }
 
+  @media (max-width: 600px){
+    margin: 0 20px;
+    }
 
 `

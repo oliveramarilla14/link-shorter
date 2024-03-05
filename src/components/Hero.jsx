@@ -1,6 +1,6 @@
 import { Container, Flex } from './styled/Container'
 import working from '../assets/illustration-working.svg'
-import { HeroText } from './styled/Header'
+import { HeroText, Max } from './styled/Header'
 import MediaQuery, { useMediaQuery } from 'react-responsive'
 
 function Hero () {
@@ -23,9 +23,9 @@ function Hero () {
           <button>Get Started</button>
         </HeroText>
         <MediaQuery minWidth='600px'>
-          <div>
+          <Max>
             <img src={working} alt='work' />
-          </div>
+          </Max>
         </MediaQuery>
       </Flex>
     </Container>
